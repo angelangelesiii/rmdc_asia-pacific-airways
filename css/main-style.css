@@ -1,0 +1,231 @@
+/*STRUCTURE*/
+a:link,
+a:visited {
+	color: #2B5A1E;
+	text-decoration: none;
+}
+a:hover {
+	color: #498937;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}
+
+
+
+
+
+/*---  HEADER  ---*/
+#top-bar {
+	text-align: center;
+	background: #F56600;
+	color: #FFFFFF;
+	padding: 4px 0;
+}
+#top-bar p {
+	margin: 5px 0;
+}
+/*navbar*/
+.front-page-header {
+	width: 100%;
+	position: relative;
+	background: #DBDBDB;
+}
+nav.site-nav {
+	border-bottom: 3px solid #F56600;
+}
+nav.site-nav.front-page-nav {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	border-bottom: none;
+}
+nav.site-nav .nav-container {
+	padding: 30px 10px 10px;
+	display: flex;
+}
+nav.site-nav.front-page-nav .nav-container {
+	background: #FFFFFF;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-webkit-box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+	box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+nav.site-nav .logo {
+	max-width: 330px;
+	padding: 5px;
+	/*background: #CB3F3F;*/
+}
+nav.site-nav .nav-menu {
+	flex-grow: 1;
+	margin: 0 auto;
+	text-align: center;
+}
+nav.site-nav .nav-menu ul#primary-menu {
+	margin: 0;
+	padding: 40px 20px;
+	list-style-type: none;
+	display: inline-block;
+}
+nav.site-nav .nav-menu ul li {
+	display: inline-block;
+	margin: 0 10px;
+	font-size: 1.15em;
+}
+/*carousel*/
+.carousel {
+	position: absolute;
+	top: 0;
+	cursor: move;
+}
+.carousel .carousel-item {
+	height: 600px;
+	width: 100%;
+	background-position: center center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+}
+/*Featured image*/
+.featured-image-container {
+	background-color: #C8C8C8 !important;
+	background-position: center center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	height: 300px;
+	width: 100%;
+}
+
+
+/*---  FOOTER  ---*/
+footer.site-footer {
+	width: 100%;
+	border-top: 3px dotted #DADADA;
+	padding: 0;
+	text-align: center;
+}
+/*footer sitemap*/
+.site-map-container {
+	padding: 50px 0;
+	border-bottom: 2px dotted #DADADA;
+}
+.site-map-container a {
+	color: #666666;
+}
+.site-map-container nav.site-map ul.menu {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.site-map-container nav.site-map ul.menu li {
+	margin: 7px 0;
+}
+/*footer main menu*/
+footer.site-footer .footer-main-menu {
+	text-align: center;
+	margin: 20px 0;
+}
+footer.site-footer ul#footer-menu-1 {
+	display: inline-block;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+footer.site-footer ul#footer-menu-1 li {
+	padding: 2px 15px;
+	border-right: 1px solid #F56600;
+	display: inline-block;
+}
+footer.site-footer ul#footer-menu-1 li:last-of-type {
+	border-right: none;
+}
+footer.site-footer ul#footer-menu-1 li a {
+	color: #F56600;
+}
+/*footer secondary menu*/
+footer.site-footer ul#footer-menu-2 {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+footer.site-footer ul#footer-menu-2 li {
+	display: inline-block;
+}
+footer.site-footer ul#footer-menu-2 li a {
+	color: #999999;
+	font-size: 0.9em;
+}
+footer.site-footer ul#footer-menu-2 li::after {
+	content: '•';
+	margin: 0 10px;
+}
+footer.site-footer ul#footer-menu-2 li:last-of-type::after {
+	content: '';
+	margin: 0;
+}
+/*footer info*/
+footer.site-footer .footer-message,
+footer.site-footer .footer-message a {
+	color: #999999;
+	font-size: 0.9em;
+	padding-bottom: 10px;
+}
+
+/*---  STATIC FRONT PAGE  ---*/
+.static-content {
+	padding: 60px 0
+}
+.static-content blockquote {
+	background: #EDF2F5;
+	padding: 30px;
+	margin: 0;
+	border-radius: 5px;
+}
+.static-content blockquote p {
+	font-weight: 700;
+	font-size: 1.15em;
+	line-height: 1.8em;
+	color: #2B5A1E;
+}
+.static-content blockquote a {
+	color: #F56600;
+	font-style: italic;
+}
+.static-content .front-page-cards {
+	margin-top: 40px;
+}
+.static-content .front-page-cards .card {
+	margin-top: 10px;
+	display: flex;
+}
+.static-content .front-page-cards .card .thumbnail {
+	width: 40%;
+}
+.static-content .front-page-cards .card .thumbnail img {
+	display: block;
+	width: 100%;
+}
+.static-content .front-page-cards .card .card-content {
+	flex-grow: 1;
+	width: 60%;
+	padding: 0 0 0 10px;
+}
+.static-content .front-page-cards .card .card-content h2 {
+	margin: 0 0 10px;
+	font-size: 1.3em;
+}
+.static-content .front-page-cards .card .card-content h2 a {
+	color: #F56600;
+}
+.static-content .front-page-cards .card .card-content p {
+	margin: 0;
+	font-size: 0.9em;
+}
