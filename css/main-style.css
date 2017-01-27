@@ -229,3 +229,13 @@ footer.site-footer .footer-message a {
 	margin: 0;
 	font-size: 0.9em;
 }
+
+/*CONTACT US TEMPLATE*/
+.contact-us-content .page-meta {
+	background: #EDF2F5;
+	border-radius: 5px;
+	padding: 20px;
+}
+.contact-us-content .page-meta h3 {
+	color: #2B5A1E;
+}
