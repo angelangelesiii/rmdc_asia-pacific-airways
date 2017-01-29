@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: RMDC
 Author URI: http://wearermdc.com/
 Description: Unique theme for Asia Pacific Airways.
-Version: 0.0.1
+Version: 0.0.7
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: asiapacificairways
@@ -279,6 +279,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	color: #F56600;
 }
 
 p {

@@ -27,7 +27,7 @@ get_header(); ?>
 			?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<h1><?php the_field('heading'); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content contact-us-content row">
@@ -37,7 +37,26 @@ get_header(); ?>
 						?>
 						</div>
 						<div class="page-meta large-5 medium-6 small-12 column">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatum sapiente quam debitis ut modi alias quae perferendis ratione, nihil fugiat, ab veniam neque. Incidunt.</p>
+							<h3>Contact Details</h3>
+							<p>
+								<?php the_field('address'); ?>
+							</p>
+							<table>
+								<tbody>
+									<tr>
+										<td>Telephone</td>
+										<td>: <?php the_field('telephone'); ?></td>
+									</tr>
+									<tr>
+										<td>Fax</td>
+										<td>: <?php the_field('fax'); ?></td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td>: <?php the_field('email'); ?></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div><!-- .entry-content -->
 					

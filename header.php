@@ -43,9 +43,17 @@
 							<div class="logo">
 								<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri().'/img/brand/logo.jpg' ?>" alt=""></a>
 							</div>
+
+							<!-- NAV MENU -->
+
+							<label for="menu-btn" class="toggle mobile-nav-btn hide-for-large"><i class="fa fa-bars" aria-hidden="true"></i></label>
+        					<input type="checkbox" id="menu-btn" class="hide-for-large"/>
+
 							<div class="nav-menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 							</div>
+
+
 						</div>
 					</div>
 				</nav>
@@ -87,6 +95,12 @@
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri().'/img/brand/logo.jpg' ?>" alt=""></a>
 						</div>
+
+						<!-- NAV MENU -->
+
+						<label for="menu-btn" class="toggle mobile-nav-btn hide-for-large"><i class="fa fa-bars" aria-hidden="true"></i></label>
+    					<input type="checkbox" id="menu-btn" class="hide-for-large"/>
+
 						<div class="nav-menu">
 							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 						</div>

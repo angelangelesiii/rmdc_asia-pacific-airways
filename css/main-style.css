@@ -7,6 +7,16 @@ a:visited {
 a:hover {
 	color: #498937;
 }
+a.post-edit-link {
+	background: #2B5A1E;
+	border-radius: 2px;
+	padding: 5px 15px;
+	color: #ACC5A5;
+}
+a.post-edit-link:hover {
+	background: #427F31;
+	color: #FFFFFF;
+}
 .wrapper {
 	width: 100%;
 	max-width: 1200px;
@@ -17,9 +27,30 @@ a:hover {
 	overflow: auto;
 	zoom: 1;
 }
-
-
-
+footer.entry-footer {
+	margin: 30px 0 0;
+}
+.prev-next-posts {
+	display: block;
+	margin: 30px auto;
+	width: 100%;
+	max-width: 900px;
+	padding: 0 10px;
+	font-weight: 700;
+	overflow: auto;
+}
+.prev-next-posts .next-posts-link {
+	float: left;
+}
+.prev-next-posts .prev-posts-link {
+	float: right;
+}
+.prev-next-posts.inverse .next-posts-link {
+	float: right;
+}
+.prev-next-posts.inverse .prev-posts-link {
+	float: left;
+}
 
 
 /*---  HEADER  ---*/
@@ -60,9 +91,15 @@ nav.site-nav.front-page-nav .nav-container {
 	box-shadow: 0 5px 30px rgba(0,0,0,0.1);
 }
 nav.site-nav .logo {
-	max-width: 330px;
+	max-width: 290px;
 	padding: 5px;
 	/*background: #CB3F3F;*/
+}
+nav.site-nav .mobile-nav-btn {
+	background: none;
+	border: none;
+	color: #2B5A1E;
+	font-size: 2em;
 }
 nav.site-nav .nav-menu {
 	flex-grow: 1;
@@ -71,7 +108,7 @@ nav.site-nav .nav-menu {
 }
 nav.site-nav .nav-menu ul#primary-menu {
 	margin: 0;
-	padding: 40px 20px;
+	padding: 40px 0;
 	list-style-type: none;
 	display: inline-block;
 }
@@ -101,6 +138,7 @@ nav.site-nav .nav-menu ul li {
 	background-repeat: no-repeat !important;
 	height: 300px;
 	width: 100%;
+	margin-bottom: 30px;
 }
 
 
@@ -231,11 +269,168 @@ footer.site-footer .footer-message a {
 }
 
 /*CONTACT US TEMPLATE*/
+.contact-us-content .page-content form {
+	width: 100%;
+	max-width: 550px;
+	overflow: auto;
+}
+.contact-us-content .page-content form input,
+.contact-us-content .page-content form textarea {
+	width: 100%;
+}
+.contact-us-content .page-content form input[type="submit"] {
+	width: auto !important;
+	background: #F56600;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	color: #FFFFFF;
+	border: none;
+	float: right;
+	margin: 0 0 30px;
+}
 .contact-us-content .page-meta {
 	background: #EDF2F5;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 30px;
 }
 .contact-us-content .page-meta h3 {
 	color: #2B5A1E;
+	margin: 0 0 10px;
+}
+
+/*SERVICES OFFERS TEMPLATE*/
+.services-offers-list .services-offers-item .image-container {
+	background: #000000;
+	padding-bottom: 75%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.services-offers-list .services-offers-item .image-container img {
+	min-height: 100%;
+	min-width: 100%;
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.services-offers-list .services-offers-item .content-container {
+	padding-bottom: 30px;
+}
+.services-offers-list .services-offers-item .content-container h3 {
+	margin: 10px 0;
+}
+.services-offers-list .services-offers-item .content-container p {
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+/*
+	=============================================
+	Media Queries
+	=============================================
+*/
+
+
+
+/*
+SMALL ONLY <640px
+*/
+@media screen and (max-width: 39.9375em) {
+	#top-bar p {
+		font-size: 0.7em;
+	}
+	.featured-image-container {
+		height: 120px;
+	}
+	.site-map-container nav.site-map ul.menu {
+		text-align: center;
+		list-style: none;
+		margin: 10px 0;
+	}
+}
+
+/*
+MEDIUM ONLY <1024px and >=640px
+*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	#top-bar p {
+		font-size: 0.8em;
+	}
+	.featured-image-container {
+		height: 190px;
+	}
+
+}
+
+/*
+MEDIUM BELOW <1024px
+*/
+@media screen and (max-width: 63.9375em) {
+	nav.site-nav.front-page-nav {
+		background: #FFFFFF
+	}
+	nav.site-nav.front-page-nav .nav-container {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	nav.site-nav .nav-container{
+		padding: 10px;
+		position: relative;
+		display: block;
+	}
+	nav.site-nav .logo {
+		max-height: 30px;
+		max-width: 180px;
+		margin: 0;
+		float: left;
+	}
+	nav.site-nav .mobile-nav-btn {
+		cursor: pointer;
+		float: right;
+		margin-right: 10px;
+	}
+	nav.site-nav [id^=menu-btn]:checked + .nav-menu {
+		display: block;
+	}
+	nav.site-nav #menu-btn {
+		display: none;
+	}
+	nav.site-nav .nav-menu {
+		display: none;
+	}
+	nav.site-nav .nav-menu ul#primary-menu {
+		display: block;
+		margin-top: 30px;
+		padding: 40px 0 10px;
+	}
+	nav.site-nav .nav-menu ul li {
+		display: block;
+		font-size: 1.4em;
+		padding: 10px;
+	}
+
+}
+
+/*
+LARGE AND UP >=1024px
+*/
+@media screen and (min-width: 64em) {
+
+}
+
+/*
+LARGE ONLY
+*/
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+
 }
