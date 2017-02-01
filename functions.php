@@ -10,8 +10,8 @@
 
 // ACF SUPPORT
 // ACF PLUGIN
-// define( 'ACF_LITE', true );
-// include_once('advanced-custom-fields/acf.php');
+define( 'ACF_LITE', true );
+include_once('advanced-custom-fields/acf.php');
 
 
 
@@ -561,3 +561,324 @@ add_action('customize_register','apa_fp_callout3');
 	==================================================
 */
 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_carousel-fields',
+		'title' => 'Carousel Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_588b04797e65f',
+				'label' => 'Image',
+				'name' => 'carousel_image',
+				'type' => 'image',
+				'required' => 1,
+				'save_format' => 'url',
+				'preview_size' => 'full',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'carousel',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_contact-us-page-details',
+		'title' => 'Contact Us Page Details',
+		'fields' => array (
+			array (
+				'key' => 'field_5891ce2dc9e9a',
+				'label' => 'Heading',
+				'name' => 'contact_us_heading',
+				'type' => 'text',
+				'instructions' => 'This will be the heading that will appear on your Contact Us page.',
+				'required' => 1,
+				'default_value' => 'Contact Us',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5891c57eba910',
+				'label' => 'Contact Details',
+				'name' => 'contact_details',
+				'type' => 'repeater',
+				'instructions' => 'This will appear on the Contact Details box on your Cotnact Us page.
+	
+	Click "Add New" to add new set of fields. Click on the "+" or "-" sign on the right side of a set of fields to remove or add a new set of fields above it.',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5891c5f2ba911',
+						'label' => 'Name',
+						'name' => 'name',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5891c85576238',
+						'label' => 'Description',
+						'name' => 'description',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5891c63bba912',
+						'label' => 'Address',
+						'name' => 'address',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5891c655ba913',
+						'label' => 'Telephone',
+						'name' => 'telephone',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5891c666ba914',
+						'label' => 'Fax',
+						'name' => 'fax',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5891c673ba915',
+						'label' => 'Email',
+						'name' => 'email',
+						'type' => 'email',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+				),
+				'row_min' => 1,
+				'row_limit' => '',
+				'layout' => 'row',
+				'button_label' => 'Add New',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template_contact.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'custom_fields',
+				1 => 'comments',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_offers-list-fields',
+		'title' => 'Offers List Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_588bf5ffe2a26',
+				'label' => 'Title to Display',
+				'name' => 'display_title',
+				'type' => 'text',
+				'instructions' => 'This will be the title appearing on the top of the page.',
+				'required' => 1,
+				'default_value' => 'Offers',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template_offers.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_office-details',
+		'title' => 'Office Details',
+		'fields' => array (
+			array (
+				'key' => 'field_5891d16d65382',
+				'label' => 'Head Office',
+				'name' => 'head_office',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5891d20865385',
+				'label' => 'Other Offices Heading',
+				'name' => 'other_offices_heading',
+				'type' => 'text',
+				'instructions' => 'This will appear as the heading on top of your "other offices" list.',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5891d1aa65383',
+				'label' => 'Other Offices',
+				'name' => 'other_offices_list',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5891d1e065384',
+						'label' => 'Office',
+						'name' => 'office',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => 1,
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Office',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template_offices.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'custom_fields',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_services-list-fields',
+		'title' => 'Services List Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_588bf01a8831b',
+				'label' => 'Title to Display',
+				'name' => 'display_title',
+				'type' => 'text',
+				'instructions' => 'This will be the title that appears on top of the services page.',
+				'required' => 1,
+				'default_value' => 'Services',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template_services.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+}

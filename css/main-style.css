@@ -293,9 +293,13 @@ footer.site-footer .footer-message a {
 	border-radius: 5px;
 	padding: 30px;
 }
-.contact-us-content .page-meta h3 {
+.contact-us-content .page-meta h3,
+.contact-us-content .page-meta h4 {
 	color: #2B5A1E;
 	margin: 0 0 10px;
+}
+.contact-us-content .page-meta h4 {
+	margin: 20px 0 0;
 }
 
 /*SERVICES OFFERS TEMPLATE*/
@@ -325,6 +329,22 @@ footer.site-footer .footer-message a {
 	margin: 0;
 }
 
+/*OFFICES TEMPLATE*/
+.office-list-content,
+.office-list-content h4,
+.office-list-content p {
+	color: #2B5A1E;
+	margin: 0;
+}
+.office-list-content .office-list-items {
+   -webkit-column-count: 2;
+      -moz-column-count: 2;
+           column-count: 2;
+
+   -webkit-column-gap: 10px;
+      -moz-column-gap: 10px;
+           column-gap: 10px;
+}
 
 
 

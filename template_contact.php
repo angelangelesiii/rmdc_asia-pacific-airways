@@ -27,7 +27,7 @@ get_header(); ?>
 			?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<h1><?php the_field('heading'); ?></h1>
+						<h1><?php the_field('contact_us_heading'); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content contact-us-content row">
@@ -37,26 +37,61 @@ get_header(); ?>
 						?>
 						</div>
 						<div class="page-meta large-5 medium-6 small-12 column">
-							<h3>Contact Details</h3>
-							<p>
-								<?php the_field('address'); ?>
-							</p>
-							<table>
-								<tbody>
+							
+							<?php //REPEATER
+
+							if (have_rows('contact_details')) {
+								while (have_rows('contact_details')) {
+									the_row(); // start ?>
+							
+								<?php if (!empty(get_sub_field('name'))) { // NAME ?>
+								<h4><?php the_sub_field('name'); ?></h4>
+								<?php } ?>
+								<table>
+									<?php if (!empty(get_sub_field('description'))) { // DESCRIPTION ?>
 									<tr>
-										<td>Telephone</td>
-										<td>: <?php the_field('telephone'); ?></td>
+										<td colspan="2">
+											<?php the_sub_field('description') ?>
+										</td>
 									</tr>
+									<?php } ?>
+									<?php if (!empty(get_sub_field('address'))) { // ADDRESS ?>
 									<tr>
-										<td>Fax</td>
-										<td>: <?php the_field('fax'); ?></td>
+										<td colspan="2">
+											<?php the_sub_field('address') ?>
+										</td>
 									</tr>
+									<?php } ?>
+									<?php if (!empty(get_sub_field('telephone'))) { // TELEPHONE ?>
 									<tr>
-										<td>Email</td>
-										<td>: <?php the_field('email'); ?></td>
+										<td>Telephone:</td>
+										<td><?php the_sub_field('telephone') ?></td>
 									</tr>
-								</tbody>
-							</table>
+									<?php } ?>
+									<?php if (!empty(get_sub_field('fax'))) { // FAX ?>
+									<tr>
+										<td>Fax:</td>
+										<td><?php the_sub_field('fax') ?></td>
+									</tr>
+									<?php } ?>
+									<?php if (!empty(get_sub_field('email'))) { // FAX ?>
+									<tr>
+										<td>Email:</td>
+										<td><?php the_sub_field('email') ?></td>
+									</tr>
+									<?php } ?>
+
+								</table>
+								
+
+							<?php
+								} // end while
+							} else { //else ?>
+							
+
+							<?php } // end if ?>
+							
+
 						</div>
 					</div><!-- .entry-content -->
 					
