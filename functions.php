@@ -12,6 +12,7 @@
 // ACF PLUGIN
 define( 'ACF_LITE', true );
 include_once('advanced-custom-fields/acf.php');
+include_once('acf-repeater/acf-repeater.php' );
 
 
 
@@ -620,7 +621,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Contact Details',
 				'name' => 'contact_details',
 				'type' => 'repeater',
-				'instructions' => 'This will appear on the Contact Details box on your Cotnact Us page.
+				'instructions' => 'This will appear on the Contact Details box on your Contact Us page.
 	
 	Click "Add New" to add new set of fields. Click on the "+" or "-" sign on the right side of a set of fields to remove or add a new set of fields above it.',
 				'sub_fields' => array (

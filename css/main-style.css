@@ -52,6 +52,11 @@ footer.entry-footer {
 	float: left;
 }
 
+/*---  404  ---*/
+.error-404 {
+	margin: 40px 0 200px;
+}
+
 
 /*---  HEADER  ---*/
 #top-bar {
