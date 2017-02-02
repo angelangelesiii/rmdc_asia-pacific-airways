@@ -316,6 +316,7 @@ footer.site-footer .footer-message a {
 	position: relative;
 }
 .services-offers-list .services-offers-item .image-container img {
+	object-fit: cover;
 	min-height: 100%;
 	min-width: 100%;
 	height: auto;
@@ -372,6 +373,12 @@ SMALL ONLY <640px
 	#top-bar p {
 		font-size: 0.7em;
 	}
+	.carousel .carousel-item {
+		height: 290px;
+	}
+	.static-content {
+		padding: 20px 0;
+	}
 	.featured-image-container {
 		height: 120px;
 	}
@@ -388,6 +395,9 @@ MEDIUM ONLY <1024px and >=640px
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
 	#top-bar p {
 		font-size: 0.8em;
+	}
+	.carousel .carousel-item {
+		height: 400px;
 	}
 	.featured-image-container {
 		height: 190px;
