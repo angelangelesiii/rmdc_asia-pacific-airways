@@ -40,8 +40,8 @@ get_header(); ?>
 							
 							<?php //REPEATER
 
-							if (have_rows('contact_details')) {
-								while (have_rows('contact_details')) {
+							if (have_rows('contact_us_details')) {
+								while (have_rows('contact_us_details')) {
 									the_row(); // start ?>
 							
 								<?php if (!empty(get_sub_field('name'))) { // NAME ?>
@@ -68,16 +68,34 @@ get_header(); ?>
 										<td><?php the_sub_field('telephone') ?></td>
 									</tr>
 									<?php } ?>
+									<?php if (!empty(get_sub_field('mobile'))) { // MOBILE ?>
+									<tr>
+										<td>Mobile:</td>
+										<td><?php the_sub_field('mobile') ?></td>
+									</tr>
+									<?php } ?>
 									<?php if (!empty(get_sub_field('fax'))) { // FAX ?>
 									<tr>
 										<td>Fax:</td>
 										<td><?php the_sub_field('fax') ?></td>
 									</tr>
 									<?php } ?>
+									<?php if (!empty(get_sub_field('sat'))) { // SAT ?>
+									<tr>
+										<td>Sat:</td>
+										<td><?php the_sub_field('sat') ?></td>
+									</tr>
+									<?php } ?>
+									<?php if (!empty(get_sub_field('website'))) { // WEBSITE ?>
+									<tr>
+										<td>Website:</td>
+										<td><a href="<?php the_sub_field('website') ?>"><?php the_sub_field('website') ?></a></td>
+									</tr>
+									<?php } ?>
 									<?php if (!empty(get_sub_field('email'))) { // FAX ?>
 									<tr>
 										<td>Email:</td>
-										<td><?php the_sub_field('email') ?></td>
+										<td><a href="mailto:<?php the_sub_field('email') ?>"><?php the_sub_field('email') ?></a></td>
 									</tr>
 									<?php } ?>
 
